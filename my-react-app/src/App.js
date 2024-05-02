@@ -1,22 +1,32 @@
-import './App.css';
-import React from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/home';
-import Create from './components/create';
-import Update from './components/update';
-
+import React from "react";
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+} from "react-router-dom";
+import "./App.css";
+import Create from "./components/create";
+import Edit from "./components/edit";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      <h1>Table Task</h1>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/create' element={<Create/>}/>
-          <Route path='/update' element={<Update/>}/>
-        </Routes>
-      </Router>
+      <h1 className="geeks">TABLE TASK </h1>
+            <h3>CRUD App</h3>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route
+                        path="/create"
+                        element={<Create />}
+                    />
+                    <Route
+                        path="/edit"
+                        element={<Edit />}
+                    />
+                </Routes>
+            </Router>
     </div>
   );
 }
